@@ -25,8 +25,8 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        val textView: TextView = findViewById(R.id.textView)
-        val button: Button = findViewById(R.id.button)
+        val titulo: TextView = findViewById(R.id.textView)
+        val login: Button = findViewById(R.id.login)
 
         fun buscarInstante(): String {
 
@@ -38,11 +38,11 @@ class MainActivity : AppCompatActivity() {
             return instanteFormatado
         }
 
-        button.setOnClickListener {
-            textView.setTextColor(getColor(R.color.verdin))
+        login.setOnClickListener {
+            titulo.setTextColor(getColor(R.color.verdin))
             val busca: String = buscarInstante()
-            textView.text = "Momento formatado: $busca"
-            textView.textSize = 20f
+            titulo.text = "Momento formatado: $busca"
+            titulo.textSize = 20f
         }
     }
 }
